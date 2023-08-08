@@ -46,9 +46,12 @@ public class BasicNavigations {
 
         System.out.println("Current title: " + driver.getTitle());
 
+        currentUrl = driver.getCurrentUrl();
 
+        System.out.println("currentUrl = " + currentUrl);
 
-
+        //this line will basically maximize the browser size
+        driver.manage().window().maximize();
     }
 
 }
