@@ -17,6 +17,9 @@ public class BasicNavigations {
         //3- get the page for Tesla.com
         driver.get("https://www.tesla.com");
 
+        //Going back using navigations
+        driver.navigate().back();
+
 
     }
 
