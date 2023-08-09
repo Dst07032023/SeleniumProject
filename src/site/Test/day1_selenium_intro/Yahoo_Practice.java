@@ -25,9 +25,11 @@ public class Yahoo_Practice {
         //3. Verify title:
         //Expected: Yahoo
         String expectedTitle = "Yahoo";
+        System.out.println("expectedTitle = " + expectedTitle);
 
         //actual value
         String actualTitle = driver.getTitle();
+        System.out.println("actualTitle = " + actualTitle);
 
         //creating our verification
         if (actualTitle.equals(expectedTitle)){
