@@ -13,6 +13,7 @@ public class Yahoo_Practice {
         WebDriverManager.chromedriver().setup();
 
         //1. Open Chrome browser
+        //This line opens EMPTY BROWSER
         WebDriver driver = new ChromeDriver();
 
         //maximize browser
@@ -34,5 +35,8 @@ public class Yahoo_Practice {
         }else{
             System.out.println("Title is not as expected. Verification FAILED!!!");
         }
+
+        //closing the browser
+        driver.close();
     }
 }

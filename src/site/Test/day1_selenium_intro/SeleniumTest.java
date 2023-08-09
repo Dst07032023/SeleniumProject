@@ -9,6 +9,7 @@ public class SeleniumTest {
 
             //1- set up the web driver
             WebDriverManager.chromedriver().setup();
+            //System.setProperty("chrome","path of where you saved the driver");
 
             //2- create the instance of the chrome driver
             WebDriver driver = new ChromeDriver();
