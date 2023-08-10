@@ -45,8 +45,7 @@ public class P3_NavigationAndTitleVerification {
         //6- Verify title equals:
         //Expected: Google
         String expectedGoogleTitle = "Google";
-        String actualGoogleTitle = driver.getTitle();
-
+        String actualGoogleTitle = driver.getTitle();//https://mail.google.com/mail
         if(actualGoogleTitle.equals(expectedGoogleTitle)){
             System.out.println("Title verification PASSED!");
         }else{
