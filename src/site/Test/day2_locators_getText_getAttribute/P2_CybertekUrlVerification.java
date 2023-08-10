@@ -4,6 +4,10 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+/*
+EXPLAINING HIGH LEEVEL WHAT IS GOING ON IN THIS CLASS.
+ */
+
 public class P2_CybertekUrlVerification {
 
     public static void main(String[] args) {
@@ -35,5 +39,13 @@ public class P2_CybertekUrlVerification {
 
         //4. Verify title:
         //Expected: Practice
+        String expectedTitle = "Practice";
+        String actualTitle = driver.getTitle();
+
+        if(actualTitle.equals(expectedTitle)){
+            System.out.println("Title verification PASSED!");
+        }else{
+            System.out.println("Title verification FAILED!!!");
+        }
     }
 }
