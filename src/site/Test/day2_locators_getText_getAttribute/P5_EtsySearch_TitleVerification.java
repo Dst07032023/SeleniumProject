@@ -21,10 +21,13 @@ public class P5_EtsySearch_TitleVerification {
 //        WebElement dropAccept = driver.findElement(By.cssSelector("[name='accept']"));
 //        dropAccept.click();
 
-        Thread.sleep(5000);
+//        Thread.sleep(5000);
 
 
         //3. Search for "wooden spoon"
+        //1st we need to locate the search bar
+        //2nd - We enter search value
+        //3rd - We press ENTER
         driver.findElement(By.id("global-enhancements-search-query")).sendKeys("wooden spoon" + Keys.ENTER);
 
         //4. Verify title:
@@ -37,6 +40,8 @@ public class P5_EtsySearch_TitleVerification {
         } else {
             System.out.println("Etsy title verification FAILED!!!");
         }
+
+        int intdklaisfa = 2;
 
         //closing the browser
         driver.close();
