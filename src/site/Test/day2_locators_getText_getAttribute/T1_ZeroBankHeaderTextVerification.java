@@ -3,6 +3,7 @@ package src.site.Test.day2_locators_getText_getAttribute;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class T1_ZeroBankHeaderTextVerification {
@@ -24,8 +25,11 @@ public class T1_ZeroBankHeaderTextVerification {
 
         //1- locate the web element
         //2- get the text of it using getText() method
+        WebElement actualHeader = driver.findElement(By.tagName("h3"));
+//        actualHeader.getText();
 
-        String actualHeader = driver.findElement(By.tagName("h3")).getText();
+//        String actualHeaderText = driver.findElement(By.tagName("h3")).getText();
+        String actualHeaderText = actualHeader.getText();
 
         if(actualHeader.equals(expectedHeader)){
             System.out.println("Header verification PASSED!");
