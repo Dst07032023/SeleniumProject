@@ -44,6 +44,6 @@ public class P5_EtsySearch_TitleVerification {
         int intdklaisfa = 2;
 
         //closing the browser
-//        driver.close();
+        driver.close();
     }
 }

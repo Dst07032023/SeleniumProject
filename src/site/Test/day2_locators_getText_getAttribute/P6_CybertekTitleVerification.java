@@ -34,5 +34,6 @@ public class P6_CybertekTitleVerification {
         }else{
             System.out.println("Title verification FAILED!!!");
         }
+        driver.close();
     }
 }
