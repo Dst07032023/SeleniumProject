@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class T2_ZeroBankAttributeVerification {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         //TC #2: Zero Bank link text verification
         //1. Open Chrome browser
@@ -22,12 +22,16 @@ public class T2_ZeroBankAttributeVerification {
         //LOCATE THE LINK AND STORE INSIDE OF WebElement
 
         WebElement zeroBankLink = driver.findElement(By.className("brand"));
+        //all of the below is locating same web element
+            //WebElement zeroBankLink = driver.findElement(By.linkText("Zero Bank"));
+            //WebElement zeroBankLink = driver.findElement(By.tagName("a"));
         //3. Verify link text from top left:
         //expected: "Zero Bank"
         String expectedLinkText = "Zero Bank";
         String actualLinkText = zeroBankLink.getText();
         //driver.findElement(By.className("brand")).getText();
 
+        Thread.sleep(5000);
         if(actualLinkText.equals(expectedLinkText)){
             System.out.println("Link text verification PASSED!");
         }else{
@@ -36,6 +40,18 @@ public class T2_ZeroBankAttributeVerification {
         }
         //4. Verify link href attribute value contains:
         //Expected: "index.html"
+        String expectedInHrefValue = "index.html";
+
+        String actualHrefValue = zeroBankLink.getAttribute("href");
+
+        if(actualHrefValue.contains(expectedInHrefValue)){
+            System.out.println("HREF attribute value verification PASSED!");
+        }else{
+            System.out.println("HREF attribute value verification FAILED!");
+
+        }
+
+//        System.out.println("actualHrefValue = " + actualHrefValue);
         driver.close();
 
     }
