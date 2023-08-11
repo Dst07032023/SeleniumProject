@@ -18,9 +18,9 @@ public class P5_EtsySearch_TitleVerification {
         //2. Go to https://www.etsy.com
         driver.get("https://www.etsy.com");
 
-//        WebElement dropAccept = driver.findElement(By.cssSelector("[name='accept']"));
+//        WebElement dropAccept = driver.findElement(By.cssSelector("[name='Accept']"));
 //        dropAccept.click();
-
+//
 //        Thread.sleep(5000);
 
 
@@ -44,6 +44,6 @@ public class P5_EtsySearch_TitleVerification {
         int intdklaisfa = 2;
 
         //closing the browser
-        driver.close();
+//        driver.close();
     }
 }
