@@ -25,6 +25,13 @@ public class T1_ZeroBankHeaderTextVerification {
         //1- locate the web element
         //2- get the text of it using getText() method
 
-        driver.findElement(By.tagName("h3"));
+        String actualHeader = driver.findElement(By.tagName("h3")).getText();
+
+        if(actualHeader.equals(expectedHeader)){
+            System.out.println("Header verification PASSED!");
+        }else{
+            System.out.println("Header verification FAILED!");
+
+        }
     }
 }
