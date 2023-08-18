@@ -47,12 +47,12 @@ public class T2_ZeroBankAttributeVerification {
         if(actualHrefValue.contains(expectedInHrefValue)){
             System.out.println("HREF attribute value verification PASSED!");
         }else{
-            System.out.println("HREF attribute value verification FAILED!");
+            System.out.println("HREF attribute value verification FAILED!!!");
 
         }
 
 //        System.out.println("actualHrefValue = " + actualHrefValue);
-        driver.close();
+//        driver.close();
 
     }
 }

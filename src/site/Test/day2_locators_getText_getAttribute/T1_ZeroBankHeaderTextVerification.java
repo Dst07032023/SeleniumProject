@@ -37,6 +37,6 @@ public class T1_ZeroBankHeaderTextVerification {
             System.out.println("Header verification FAILED!!!");
 
         }
-        driver.close();
+//        driver.close();
     }
 }

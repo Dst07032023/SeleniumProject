@@ -4,10 +4,11 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class P4_GoogleSearchVerification {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         //TC #4: Google search
         //1- Open a chrome browser
@@ -17,6 +18,11 @@ public class P4_GoogleSearchVerification {
 
         //2- Go to: https://google.com
         driver.get("https://google.com");
+
+        WebElement dropAgree = driver.findElement(By.cssSelector("[name='Alles accepteren']"));
+        dropAgree.click();
+
+        Thread.sleep(5000);
 
         //3- Write "apple" in search box
         //4- Click google search button
