@@ -42,7 +42,20 @@ public class F2_IncorrectLoginTitleVerification {
 
         //5. Verify title changed to:
         //Expected: "Log into Facebook"
+        String  expectedTitle = "Log into Facebook";
 
+        //Freezing the code for 5 secs so that Chrome browser can catch up with loading the page
+        Thread.sleep(5000);
+
+        String actualTitle = driver.getTitle();
+
+        if(actualTitle.equals(expectedTitle)){
+            System.out.println("Title verification PASSED!");
+        }else{
+            System.out.println("Title verification FAILED!!!");
+
+        }
+        driver.close();
 
     }
 }
