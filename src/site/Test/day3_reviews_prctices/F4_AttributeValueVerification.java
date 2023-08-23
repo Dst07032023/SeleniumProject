@@ -23,6 +23,23 @@ public class F4_AttributeValueVerification {
         Thread.sleep(3000);
 
         //3. Verify “Create a page” link href value contains text:
+
+        //Locating the "Create a page" link
+        WebElement createPageLink = driver.findElement(By.linkText("Create a Page"));
+
         //Expected: “registration_form”
+        String expectedInHref = "registration_form";
+        String actualHrefValue = createPageLink.getAttribute("href");
+
+        System.out.println("actualHrefValue = " + actualHrefValue);
+
+        if(actualHrefValue.contains(expectedInHref)){
+            System.out.println("HREF value verification PASSED!");
+        }else{
+            System.out.println("HREF value verification FAILED!");
+
+        }
+        driver.close();
+
     }
 }
