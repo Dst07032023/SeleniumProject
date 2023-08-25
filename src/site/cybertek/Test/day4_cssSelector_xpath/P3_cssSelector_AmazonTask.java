@@ -12,6 +12,8 @@ public class P3_cssSelector_AmazonTask {
         WebDriver driver = WebDriverFactory.getDriver("chrome");
 
         //2. Go to https://www.amazon.com
+        driver.get("https://www.amazon.com");
+
         //3. Enter search term (use cssSelector to locate search box)
         //4. Verify title contains search term
     }
